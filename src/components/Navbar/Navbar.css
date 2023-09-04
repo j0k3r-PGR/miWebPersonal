@@ -23,3 +23,33 @@ a{
     border-radius: 5px;
     background-color: #1E90FF;
 }
+
+@media only screen and (max-device-width: 700px){
+    nav{
+        flex-direction: column;
+        color: red;
+    }
+    a{
+        color: red;
+    }
+}
+
+@media screen and (max-width: 700px) and (min-width: 320px) {
+    /* Reglas CSS para dispositivos móviles con un ancho de al menos 320 píxeles */
+    nav{
+        width: 100%;
+        background-color: #1E90FF;
+        margin-bottom: 10px;
+    }
+    ul{
+        width: 100%;
+        flex-direction: column;
+        color: red;
+    }
+    li{
+        width: 100%;
+    }
+    a{
+        
+    }
+  }
