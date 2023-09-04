@@ -9,19 +9,19 @@ import Game from './pages/Game/Game.jsx';
 
 const route = createBrowserRouter([
   {
-    path : "/miWebPersonal",
+    path : "/",
     element : <App />,
     children : [
       {
-        path : "",
+        path : "/",
         element : <Home />,
       },
       {
-        path : "pokemons",
+        path : "/pokemons",
         element : <Pokemons />,
       },
       {
-        path : "game",
+        path : "/game",
         element : <Game />,
       }
     ]

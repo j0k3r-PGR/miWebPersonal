@@ -6,9 +6,9 @@ export default function Navbar(){
         <>
             <nav>
                 <ul>
-                    <li><Link to="/miWebPersonal/">Home</Link></li>
-                    <li><Link to="/miWebPersonal/pokemons">Pokemons</Link></li>
-                    <li><Link to="/miWebPersonal/game">Game</Link></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/pokemons">Pokemons</Link></li>
+                    <li><Link to="/game">Game</Link></li>
                 </ul>
             </nav>
         </>
