@@ -8,7 +8,8 @@ export default function Navbar(){
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/pokemons">Pokemons</Link></li>
-                    <li><Link to="/game">Game</Link></li>
+                    <li><Link to="/game">Five In Line</Link></li>
+                    <li><Link to="/battlegame">Battle Game</Link></li>
                 </ul>
             </nav>
         </>

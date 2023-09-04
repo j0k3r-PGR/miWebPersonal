@@ -1,11 +1,15 @@
 import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './pages/Home/Home.jsx';
 import Pokemons from './pages/Pokemons/Pokemons.jsx';
 import './main.css';
+
+
 import App from './App.jsx';
+import Home from './pages/Home/Home.jsx';
 import Game from './pages/Game/Game.jsx';
+import BattleGameProvider from './providers/BattleGameProvider.jsx';
+import BattleGame from './pages/BattleGame/BattleGame.jsx';
 
 const route = createBrowserRouter([
   {
@@ -23,6 +27,10 @@ const route = createBrowserRouter([
       {
         path : "/game",
         element : <Game />,
+      },
+      {
+        path : "/battlegame",
+        element : <BattleGameProvider><BattleGame /></BattleGameProvider>
       }
     ]
   }
