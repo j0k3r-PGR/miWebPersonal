@@ -1,6 +1,6 @@
 .box{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     background-color: white;
     border: 1px solid black;
@@ -10,8 +10,8 @@
 .out{
     position: absolute;
     border-radius: 100%;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     top : -50px;
     transition: all 1s ease-in-out;
     z-index: 1;
@@ -23,4 +23,16 @@
 
 .grenn{
     background-color: green;
+}
+
+@media screen and (max-width: 700px) and (min-width: 320px) {
+    .box{
+        width: 35px;
+        height: 35px;
+    }
+
+    .out{
+        width: 35px;
+        height: 35px;
+    }
 }
