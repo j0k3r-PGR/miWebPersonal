@@ -11,10 +11,10 @@
 }
 
 .win{
-    position: absolute;
+    position: absolute ;
+    width: 40%;
+    height: 72%;
     display: flex;
     place-content: center;
-    width: 592px;
-    height: 610px;
     background-color: rgba(0, 0, 0, 0.514);
 }

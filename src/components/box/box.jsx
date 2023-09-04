@@ -10,7 +10,7 @@ export default function Box({index, turn,setTurn,player1,player2, setWinner}) {
         }else{
             player2.current.push(index);
         }
-        e.target.children[0].style.top = e.target.offsetTop+1+'px';
+        e.target.children[0].style.top = e.target.offsetTop+0+'px';
         e.target.style.cursor='default';
     }
 
