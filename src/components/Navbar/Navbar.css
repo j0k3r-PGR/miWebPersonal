@@ -44,12 +44,8 @@ a{
     ul{
         width: 100%;
         flex-direction: column;
-        color: red;
     }
     li{
         width: 100%;
-    }
-    a{
-        
     }
   }
