@@ -11,7 +11,7 @@ export default function BattleGame(){
             <div className="battlegame">
                 {
                     [...Array(100)].map( (_,index) =>{
-                        return <BoxBattleGame key={index}/>
+                        return <BoxBattleGame index={index} key={index}/>
                     })
                 }
             </div>
