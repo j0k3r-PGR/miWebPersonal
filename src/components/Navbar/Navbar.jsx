@@ -10,6 +10,10 @@ export default function Navbar(){
         menu.current.style.left= "0";
     }
 
+    const handleHideMenu = () => {
+        menu.current.style.left= "-100%";
+    }
+
     return(
         <>
             <nav>
@@ -20,10 +24,10 @@ export default function Navbar(){
                     <div className="buttonClose">
                         <img src="/imgs/close.png" alt="close-button" onClick={() => menu.current.style.left= "-100%"} />
                     </div>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/pokemons">Pokemons</Link></li>
-                    <li><Link to="/game">Five In Line</Link></li>
-                    <li><Link to="/battlegame">Battle Game</Link></li>
+                    <li onClick={handleHideMenu}><Link to="/">Home</Link></li>
+                    <li onClick={handleHideMenu}><Link to="/pokemons">Pokemons</Link></li>
+                    <li onClick={handleHideMenu}><Link to="/game">Five In Line</Link></li>
+                    <li onClick={handleHideMenu}><Link to="/battlegame">Battle Game</Link></li>
                 </ul>
             </nav>
         </>
