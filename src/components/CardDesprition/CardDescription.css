@@ -12,11 +12,50 @@
 .card-description>div{
     width: 560px;
     height: 490px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.815);
     display: grid;
     grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
 }
 
-h2{
-    
+.close{
+    width: 40px;
+    height: 40px;   
+    margin-top: 20px;
+    margin-right: 20px;
+    display: flex;
+    border: 2px solid white;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1/2;
+    grid-column: 12/13;
+    cursor: pointer;
+    font-size: 2rem;    
+}
+
+.card-description>div>h2{
+    grid-row: 2/4;
+    grid-column: 1/13;
+    font-size: 3rem;
+    margin: auto;
+}
+
+.card-description>div>.text{
+    grid-row: 4/11;
+    grid-column: 1/13;
+    font-size: 1.5rem;
+    margin: auto;
+    padding: 20px;
+    overflow: auto;
+
+}
+
+.card-description>div>.outtext{
+    grid-row: 11/12;
+    grid-column: 1/13;
+    font-size: 1.5rem;
+    margin: auto;
+    padding: 20px;
+    overflow: auto;
 }

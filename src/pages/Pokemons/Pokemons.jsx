@@ -69,7 +69,6 @@ export default function Pokemons(){
         setPage("https://pokeapi.co/api/v2/pokemon?limit="+event.target.childNodes[0].data)
     }
 
-
     return(
         <>
             <h1>Pokemons</h1>
