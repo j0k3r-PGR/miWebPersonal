@@ -1,9 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import Card from "../../components/Card/Card";
 import './pokemons.css'
+import { ClipLoader } from "react-spinners";
 
 
 export default function Pokemons(){
+
+    const [isLoader, setIsLoader] = useState(true);
 
     const [pokemons, setPokemons] = useState([]);
     const [page, setPage] = useState("https://pokeapi.co/api/v2/pokemon?limit=100");
@@ -25,15 +28,22 @@ export default function Pokemons(){
                 setNextPage(data.next);
                 setPreviousPage(data.previous);
             });
-    }, [page]);
+            setTimeout(() => {
+                if (isLoader){
+                    setIsLoader(false);
+                }
+            },2500)
+    }, [page, isLoader]);
 
 
     const handleNextPage = () => {
-            setPage(nextPage);
+        setIsLoader(true);
+        setPage(nextPage);
     };
 
     const handlePreviousPage = () => {
-            setPage(previousPage);
+        setIsLoader(true);
+        setPage(previousPage);
     };
 
     const handleClickSearch = () => {
@@ -55,6 +65,7 @@ export default function Pokemons(){
 
 
     const handleClickChangeLimit = (event) =>{
+        setIsLoader(true)
         setPage("https://pokeapi.co/api/v2/pokemon?limit="+event.target.childNodes[0].data)
     }
 
@@ -82,6 +93,12 @@ export default function Pokemons(){
                     </div>
                 </div>
             </div>
+            {
+                isLoader && 
+                        <div className="spinner-container">
+                            <ClipLoader color="#ff0" size={150} />
+                        </div>
+            }
             <div className="pokemons">
                 {
                     pokemons.filter( (pokemon) => {
@@ -95,6 +112,7 @@ export default function Pokemons(){
                     ))
                 }
             </div>
+            <ClipLoader color="#f00" loading={pokemons.length === 0} size={150} />
             
         </>
     );

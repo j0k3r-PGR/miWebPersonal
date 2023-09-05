@@ -101,6 +101,17 @@ button{
     border: 1px solid blue;
 }
 
+.spinner-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0000007c;
+}
+
 @media screen and (max-width: 700px) and (min-width: 320px) {
     /* Reglas CSS para dispositivos móviles con un ancho de al menos 320 píxeles */
     .pokemons{

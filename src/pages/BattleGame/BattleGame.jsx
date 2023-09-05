@@ -1,20 +1,27 @@
 import BoxBattleGame from '../../components/BoxBattleGame/BoxBattleGame.jsx';
-import BattleGameProvider from '../../providers/BattleGameProvider.jsx';
+import CardDescription from '../../components/CardDesprition/CardDescription.jsx';
 import { useBattleGameContext } from '../../providers/BattleGameProvider.jsx';
 import './BattleGame.css';
 
-export default function BattleGame(){
+const textDescription = "hola soy un texto descriptivo"
 
-    const [player, pc] = useBattleGameContext();
+export default function BattleGame() {
 
-    return(        
+    const [player, pc,init, setInit] = useBattleGameContext();
+
+    console.log(player, pc)
+
+    return (
+        <>
             <div className="battlegame">
                 {
-                    [...Array(100)].map( (_,index) =>{
-                        return <BoxBattleGame index={index} key={index}/>
+                    [...Array(100)].map((_, index) => {
+                        return <BoxBattleGame index={index} key={index} />
                     })
                 }
             </div>
+            <CardDescription text={textDescription} />
+        </>
     );
 }
 
