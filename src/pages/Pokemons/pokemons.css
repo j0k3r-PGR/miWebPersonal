@@ -6,6 +6,8 @@
 }
 
 .pages{
+    grid-row: 1;
+    grid-column: 6/8;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -25,6 +27,71 @@ button{
     font-weight: bold;
     cursor: pointer;
 }
+
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+
+.search{
+    grid-row: 1;
+    grid-column: 1/6;
+}
+
+.none{
+    display: none;
+}
+
+.img-container>img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.img-container>input{
+    margin-left: 20px;
+    height: 30px;
+    width: 100%;
+    transition: all 1s ease-in-out;
+}
+
+.img-container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    border: 1px solid white;
+    transition: all 1s ease;
+}
+
+.showpokemons{
+    grid-column: 8/13;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.showpokemons>h3{
+    margin: auto;
+    grid-row: 1;
+    grid-column: 1/5;
+}
+
+.numbers{
+    grid-row: 2;
+    grid-column: 1/5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+
+
+.numbers>p:hover{
+    cursor: pointer;
+    color: blue;
+
+}
+
 
 @media screen and (max-width: 700px) and (min-width: 320px) {
     /* Reglas CSS para dispositivos móviles con un ancho de al menos 320 píxeles */

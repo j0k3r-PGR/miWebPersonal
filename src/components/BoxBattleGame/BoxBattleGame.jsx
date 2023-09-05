@@ -15,8 +15,10 @@ export default function BoxBattleGame({index}){
     }
 
     return(
-        <div className="box-battlegame" onClick={handleClick}>
-        </div>
+        <>
+            <div className="box-battlegame" onClick={handleClick}>
+            </div>
+        </>
     );
 
 }
