@@ -4,7 +4,7 @@ import CardDescription from '../../components/CardDesprition/CardDescription.jsx
 import { useBattleGameContext } from '../../providers/BattleGameProvider.jsx';
 import './BattleGame.css';
 
-const textDescription = "Hay diez barcos escondidos al azar dentro de este tablero, solo dispone de 30 errores para ganar el juego. Para ganar el juego, debe encontrar todos los barcos sin exceder el límite de errores."
+const textDescription = "Hay diez barcos escondidos al azar dentro de este tablero, solo dispone de 30 errores para ganar el juego. Para ganar el juego, debe encontrar todos los barcos sin exceder el límite de errores.";
 
 export default function BattleGame() {
 
