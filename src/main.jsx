@@ -7,6 +7,7 @@ import './main.css';
 
 import App from './App.jsx';
 import Home from './pages/Home/Home.jsx';
+import GameProvider from './providers/GameProvider.jsx'
 import Game from './pages/Game/Game.jsx';
 import BattleGameProvider from './providers/BattleGameProvider.jsx';
 import BattleGame from './pages/BattleGame/BattleGame.jsx';
@@ -26,7 +27,7 @@ const route = createBrowserRouter([
       },
       {
         path : "/game",
-        element : <Game />,
+        element : <GameProvider><Game /></GameProvider>,
       },
       {
         path : "/battlegame",

@@ -38,11 +38,13 @@ export default function Pokemons(){
 
     const handleClickSearch = () => {
         if (enableSearch){
-            inputSearch.current.style.display = "none";
-            divSearch.current.style.width = "";
+            inputSearch.current.style.width="-1";
+            inputSearch.current.style.display="none";
+            divSearch.current.style.width = "50px";
         }else{
-            inputSearch.current.style.display = "block";
             divSearch.current.style.width = "90%";
+            inputSearch.current.style.display="block";
+            inputSearch.current.style.width="100%";
         }
         setEnableSearch(!enableSearch);
     }

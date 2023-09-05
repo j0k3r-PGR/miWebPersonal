@@ -51,8 +51,8 @@ button{
 .img-container>input{
     margin-left: 20px;
     height: 30px;
-    width: 100%;
-    transition: all 1s ease-in-out;
+    width: 0;
+    transition: all 1s ease-out ;
 }
 
 .img-container{
@@ -85,17 +85,45 @@ button{
     justify-content: space-around
 }
 
+.numbers>p{
+    padding: 2px 30px;
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 1s ease;
+    border: 1px solid white;
+    border-radius: 10px;
+}
 
 .numbers>p:hover{
     cursor: pointer;
     color: blue;
-
+    border: 1px solid blue;
 }
-
 
 @media screen and (max-width: 700px) and (min-width: 320px) {
     /* Reglas CSS para dispositivos móviles con un ancho de al menos 320 píxeles */
     .pokemons{
         grid-template-columns: repeat(3,1fr);
     }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .img-container{
+        width: 90%;
+    }
+
+    .img-container>input{
+        display: block;
+        width: 100%;
+    }
+
+    .showpokemons{
+        margin-bottom: 20px;
+    }
+
   }
